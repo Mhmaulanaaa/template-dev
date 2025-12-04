@@ -1,8 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-// ProductCard.jsx
-import { Star } from "lucide-react";
-export default function ProductCard({ product }) {
-    return (_jsxs("div", { className: "group p-5 rounded-2xl border border-purple-600 bg-white dark:bg-zinc-900 hover:shadow-xl hover:-translate-y-1 transition-all duration-300", children: [_jsxs("div", { className: "relative rounded-xl overflow-hidden", children: [_jsx("img", { src: product.img, alt: product.name, className: "w-full h-40 object-cover rounded-xl group-hover:scale-105 transition" }), _jsx("span", { className: "absolute top-3 left-3 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg", children: "Best Seller" })] }), _jsxs("div", { className: "mt-4 space-y-3", children: [_jsx("p", { className: "text-sm text-gray-500 dark:text-gray-400", children: product.category || "Template UI Premium" }), _jsx("h4", { className: "font-bold text-lg line-clamp-2", children: product.name }), _jsx("div", { className: "flex items-center gap-1", children: Array.from({ length: 5 }).map((_, i) => (_jsx(Star, { size: 16, className: i < (product.rating || 5)
-                                ? "fill-yellow-400 text-yellow-400"
-                                : "text-gray-300" }, i))) }), _jsxs("div", { className: "flex justify-between items-center pt-3", children: [_jsxs("span", { className: "text-xl font-extrabold text-purple-600", children: ["Rp ", product.price.toLocaleString()] }), _jsx("button", { className: "px-4 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition", children: "Lihat" })] })] })] }));
-}
