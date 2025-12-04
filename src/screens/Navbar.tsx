@@ -1,15 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Navbar({ cartCount }: { cartCount: number }) {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "products", "about", "contact", "faq"];
+
+      const scrollPos = window.scrollY + 120;
+      for (const id of sections) {
+        const element = document.getElementById(id);
+        if (element) {
+          if (
+            scrollPos >= element.offsetTop &&
+            scrollPos < element.offsetTop + element.offsetHeight
+          ) {
+            setActiveSection(id);
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const [activeSection, setActiveSection] = useState<string>("home");
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* LEFT — LOGO */}
-        <a href="#hero" className="flex items-center gap-2">
+        <a href="#home" className="flex items-center gap-2">
           <img
             src="/src/assets/logo/vite.svg"
             alt="Logo"
@@ -22,30 +45,19 @@ export default function Navbar({ cartCount }: { cartCount: number }) {
 
         {/* CENTER NAV — DESKTOP */}
         <div className="hidden md:flex gap-8 font-medium text-gray-700">
-          <a
-            href="#hero"
-            className="hover:text-purple-600 transition-colors duration-200"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="hover:text-purple-600 transition-colors duration-200"
-          >
-            About
-          </a>
-          <a
-            href="#products"
-            className="hover:text-purple-600 transition-colors duration-200"
-          >
-            Products
-          </a>
-          <a
-            href="#contact"
-            className="hover:text-purple-600 transition-colors duration-200"
-          >
-            Contact
-          </a>
+          {["home", "products", "about", "contact", "faq"].map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className={`transition-colors duration-200 ${
+                activeSection === section
+                  ? "text-purple-600"
+                  : "hover:text-purple-600 text-gray-700"
+              }`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
         </div>
 
         {/* RIGHT — CART + CTA */}

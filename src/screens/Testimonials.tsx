@@ -43,7 +43,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.15 }}
             viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 border transition-all duration-300"
+            className="bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 border border-purple-600 transition-all duration-300"
           >
             {/* Header — Avatar + Name */}
             <div className="flex items-center gap-5 mb-4">

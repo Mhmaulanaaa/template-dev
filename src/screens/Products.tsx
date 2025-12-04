@@ -102,10 +102,18 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="products" className="px-6 py-20 max-w-6xl mx-auto">
-      <h3 className="text-4xl font-extrabold text-center mb-14 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+    <section
+      id="products"
+      className="min-h-screen px-6 py-20 max-w-6xl mx-auto"
+    >
+      <h3 className="text-4xl font-extrabold text-center mb-5 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
         Template Premium Unggulan
       </h3>
+
+      <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+        Koleksi template modern dan berkualitas tinggi yang siap pakai untuk
+        website, landing page, dashboard, dan aplikasi bisnis Anda.
+      </p>
 
       <div className="grid md:grid-cols-3 gap-10">
         {products.map((p) => (

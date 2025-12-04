@@ -5,9 +5,9 @@ import Hero from "./screens/Hero";
 import Products from "./screens/Products";
 import Testimonials from "./screens/Testimonials";
 import PromoBanner from "./screens/PromoBanner";
-import Contact from "./screens/Contact";
-import About from "./screens/About";
 import Footer from "./screens/Footer";
+import About from "./screens/About";
+import Contact from "./screens/Contact";
 import FAQSection from "./screens/Faq";
 
 export default function App() {

@@ -24,7 +24,7 @@ export default function HeroTemplate() {
   ];
 
   return (
-    <section className="relative w-full h-[100vh] overflow-hidden">
+    <section className="relative w-full h-[100vh] overflow-hidden" id="home">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 3500 }}

@@ -11,7 +11,7 @@ interface Product {
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="group p-5 rounded-2xl border bg-white dark:bg-zinc-900 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div className="group p-5 rounded-2xl border border-purple-600 bg-white dark:bg-zinc-900 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       {/* Thumbnail */}
       <div className="relative rounded-xl overflow-hidden">
         <img
