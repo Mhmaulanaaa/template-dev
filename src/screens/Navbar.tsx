@@ -33,11 +33,7 @@ export default function Navbar({ cartCount }: { cartCount: number }) {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* LEFT — LOGO */}
         <a href="#home" className="flex items-center gap-2">
-          <img
-            src="/src/assets/logo/vite.svg"
-            alt="Logo"
-            className="h-10 object-contain"
-          />
+          <img src="logo/vite.svg" alt="Logo" className="h-10 object-contain" />
           <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-purple-600 to-cyan-500 text-transparent bg-clip-text">
             Template Frogs
           </h1>
