@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { motion } from "framer-motion";
+export default function PromoBanner() {
+    return (_jsxs(motion.div, { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 }, className: "\n        bg-gradient-to-r from-purple-600 to-pink-500\n        rounded-1xl p-8 text-white text-center shadow-lg my-10\n      ", children: [_jsx("span", { className: "text-sm font-medium bg-white/20 px-3 py-1 rounded-full", children: "\u2B50 Promo Terbatas" }), _jsx("h3", { className: "text-3xl md:text-4xl font-extrabold mt-3", children: "Diskon Template Premium Hingga 60%" }), _jsx("p", { className: "mt-2 text-sm md:text-base opacity-90", children: "Berlaku untuk semua template React, Next.js, Vue, dan Figma." }), _jsx(motion.button, { whileHover: { scale: 1.05 }, className: "\n          mt-6 px-6 py-3 bg-white text-purple-700 \n          rounded-xl font-semibold shadow-md\n        ", children: "Lihat Promo" })] }));
+}
